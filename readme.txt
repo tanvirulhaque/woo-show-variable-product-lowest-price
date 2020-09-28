@@ -1,7 +1,7 @@
-=== WooCommerce Show Variable Product Lowest Price ===
+=== WooCommerce Disable Variable Product Price Range ===
 Contributors: tanvirul
 Donate link:
-Tags: price, variable product, woocommerce price range, product price range
+Tags: price, variable products, woocommerce price range, product price range, variations,
 Requires at least: 4.1
 Tested up to: 5.5.1
 Stable tag: trunk
@@ -9,22 +9,24 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Show Variable Product Lowest Price
+WooCommerce Disable Variable Product Price Range
 
 == Description ==
+Do you want to hide the price range for WooCommerce variable products?
 
-With this plugin you can easily disable variable product price range in WooCommerce store and it will increase the converstion rate by **showing only lowest prices** for variable products.
+The process is easy. You just need to install this **'WooCommerce Disable Variable Product Price Range'** plugin. The plugin enables variable products to show only the lowest price and sale price.
+
+So, when you create a variable product with multiple prices, the product's price is shown as a range on the product page and the shop page. With the help of this plugin, you can set different prices for the variations of your product but it will only show the lowest price as like AliExpress and Amazon.
 
 
 It’s a lightweight plugin that gives you lots of features such as:
 
 = Features: =
 * Ready to use without any setup.
-* All popular page builders compitible.
 * Works with variable sale prices.
 * Perfectly works on Shop/Archive and Product page.
-* "From" title customizable and translateable.
-* 
+* "From" title customizable and translatable.
+* All popular page builders compatible.
 
 
 == Installation ==
@@ -54,12 +56,3 @@ If you are unable to use any of the methods due to internet connectivity and fil
 5. Log in to your WordPress dashboard.
 6. Navigate to Plugins -> Installed
 7. Activate the plugin
-
-
-Only display minimum price for WooCommerce variable products, 
-Hide Price Range for WooCommerce Variable Products, 
-Replace the Variable Price range by the chosen variation price, 
-How to Change the Variable Product Price Range in WooCommerce, 
-**Disable Variable Product Price Range in WooCommerce, 
-product price range, 
-disable variable product price range
