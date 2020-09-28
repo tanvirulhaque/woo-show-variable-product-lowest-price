@@ -130,8 +130,7 @@ if( ! class_exists('Woo_Variable_Lowest_Price') ) {
 		 */
 		private function init_hooks() {
 
-			// add_action( 'init', array( $this, 'localization_setup' ) );
-
+			add_action( 'init', array( $this, 'localization_setup' ) );
 			add_action( 'admin_notices', array( $this, 'php_requirement_notice' ) );
 			add_action( 'admin_notices', array( $this, 'wc_requirement_notice' ) );
 			add_action( 'admin_notices', array( $this, 'wc_version_requirement_notice' ) );
@@ -154,7 +153,7 @@ if( ! class_exists('Woo_Variable_Lowest_Price') ) {
 		 */
 		public function localization_setup() {
 
-			// load_plugin_textdomain( 'woo-show-variable-product-lowest-price', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+			load_plugin_textdomain( 'woo-show-variable-product-lowest-price', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		}
 
