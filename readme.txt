@@ -1,4 +1,4 @@
-=== WooCommerce Disable Variable Product Price Range ===
+=== WooCommerce - Disable Variable Product Price Range ===
 Contributors: tanvirul
 Donate link:
 Tags: price, variable products, woocommerce price range, product price range, variations,
@@ -9,12 +9,12 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Disable Variable Product Price Range
+WooCommerce - Disable Variable Product Price Range
 
 == Description ==
 Do you want to hide the price range for WooCommerce variable products?
 
-The process is easy. You just need to install this **'WooCommerce Disable Variable Product Price Range'** plugin. The plugin enables variable products to show only the lowest price and sale price.
+The process is easy. You just need to install this **'WooCommerce - Disable Variable Product Price Range'** plugin. The plugin enables variable products to show only the lowest price and sale price.
 
 So, when you create a variable product with multiple prices, the product's price is shown as a range on the product page and the shop page. With the help of this plugin, you can set different prices for the variations of your product but it will only show the lowest price as like AliExpress and Amazon.
 
