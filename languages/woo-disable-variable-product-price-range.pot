@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce - Disable Variable Product Price Range\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-01 10:38+0000\n"
+"POT-Creation-Date: 2020-10-12 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,6 +14,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.4.3; wp-5.5.1"
+
+#: woo-disable-variable-product-price-range.php:113
+msgid "From:"
+msgstr ""
+
+#: woo-disable-variable-product-price-range.php:144
+msgid "Please check PHP version requirement."
+msgstr ""
+
+#: woo-disable-variable-product-price-range.php:146
+msgid ""
+"It's required to use latest version of PHP to use <strong>WooCommerce - "
+"Disable Variable Product Price Range</strong>."
+msgstr ""
+
+#: woo-disable-variable-product-price-range.php:159
+msgid "WooCommerce"
+msgstr ""
 
 #: woo-disable-variable-product-price-range.php:169
 msgid ""
@@ -28,45 +46,27 @@ msgid ""
 "use latest version of WooCommerce to work with %s."
 msgstr ""
 
+#. Name of the plugin
+#: woo-disable-variable-product-price-range.php:190
+msgid "WooCommerce - Disable Variable Product Price Range"
+msgstr ""
+
 #. Description of the plugin
 msgid ""
 "Disable Price Range and shows only the lowest price and sale price in the "
 "WooCommerce variable products."
 msgstr ""
 
-#: woo-disable-variable-product-price-range.php:113
-msgid "From"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "http://wpxpress.net"
-msgstr ""
-
 #. URI of the plugin
 msgid ""
-"https://wordpress.org/disable-variable-product-price-range-show-only-lowest-"
-"price-in-variable-products/"
-msgstr ""
-
-#: woo-disable-variable-product-price-range.php:146
-msgid ""
-"It's required to use latest version of PHP to use <strong>WooCommerce - "
-"Disable Variable Product Price Range</strong>."
-msgstr ""
-
-#: woo-disable-variable-product-price-range.php:144
-msgid "Please check PHP version requirement."
+"https://wordpress.org/plugins/disable-variable-product-price-range-show-only-"
+"lowest-price-in-variable-products/"
 msgstr ""
 
 #. Author of the plugin
 msgid "Tanvirul Haque"
 msgstr ""
 
-#: woo-disable-variable-product-price-range.php:159
-msgid "WooCommerce"
-msgstr ""
-
-#. Name of the plugin
-#: woo-disable-variable-product-price-range.php:190
-msgid "WooCommerce - Disable Variable Product Price Range"
+#. Author URI of the plugin
+msgid "http://wpxpress.net"
 msgstr ""

@@ -1,7 +1,7 @@
 === WooCommerce - Disable Variable Product Price Range ===
 Contributors: tanvirul
 Donate link:
-Tags: price, variable products, woocommerce price range, product price range, variations,
+Tags: price, prices, variable products, variations, woocommerce
 Requires at least: 4.1
 Tested up to: 5.5.1
 Stable tag: trunk
@@ -9,25 +9,28 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce - Disable Variable Product Price Range
+Show only the lowest price and sale price on shop/archive and product page instead of full range of prices.
 
 == Description ==
-Do you want to hide the price range for WooCommerce variable products?
+Do you want to **hide the price range** for WooCommerce variable products?
 
-The process is easy. You just need to install this **'WooCommerce - Disable Variable Product Price Range'** plugin. The plugin enables variable products to show only the lowest price and sale price.
+When you create a variable product with multiple prices, the product's prices are shown as a range like $10 - $99. With the help of this plugin, you can set different prices for the variations of your product but it will show only the lowest price as like AliExpress and Amazon.
 
-So, when you create a variable product with multiple prices, the product's price is shown as a range on the product page and the shop page. With the help of this plugin, you can set different prices for the variations of your product but it will only show the lowest price as like AliExpress and Amazon.
+The process is easy. You just need to install this **'WooCommerce - Disable Variable Product Price Range'** plugin. The plugin enables variable products to **show only the lowest price and sale price** instead of the full range of prices.
 
 
 It’s a lightweight plugin that gives you lots of features such as:
 
 = Features: =
+
 * Ready to use without any setup.
 * Works with variable sale prices.
 * Perfectly works on Shop/Archive and Product page.
 * "From" title customizable and translatable.
 * All popular page builders compatible.
 
+
+Please let us know your feedback, if you think something can be more awesome this plugin, we will added it.
 
 == Installation ==
 ###Automatic Install From WordPress Dashboard
