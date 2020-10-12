@@ -1,10 +1,10 @@
 <?php
 /*
  * Plugin Name: WooCommerce - Disable Variable Product Price Range
- * Plugin URI: https://wordpress.org/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
+ * Plugin URI: https://wordpress.org/plugins/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
  * Description: Disable Price Range and shows only the lowest price and sale price in the WooCommerce variable products.
  * Author: Tanvirul Haque
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author URI: http://wpxpress.net
  * Text Domain: woo-disable-variable-product-price-range
  * Domain Path: /languages
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          * @var  string
          */
-        public $version = '1.0.0';
+        public $version = '1.0.1';
 
 
         /**
@@ -110,7 +110,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          */
         public function disable_variable_price_range( $price, $product ) {
-            $prefix = apply_filters( 'wdvpr_price_title', sprintf( '%s: ', __( 'From', 'woo-disable-variable-product-price-range' ) ) );
+            $prefix = apply_filters( 'wdvpr_price_title', sprintf( '%s ', __( 'From:', 'woo-disable-variable-product-price-range' ) ) );
 
             $min_var_reg_price = $product->get_variation_regular_price( 'min', true );
             $min_var_sale_price = $product->get_variation_sale_price( 'min', true );
