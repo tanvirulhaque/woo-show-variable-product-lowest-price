@@ -1,4 +1,4 @@
-=== WooCommerce - Disable Variable Product Price Range ===
+=== WooCommerce - Show Only Lowest Price in Variable Products ===
 Contributors: tanvirul
 Donate link:
 Tags: price, prices, variable products, variations, woocommerce
@@ -9,14 +9,14 @@ Requires PHP: 5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Show only the lowest price and sale price on shop/archive and product page instead of full range of prices.
+Show only the lowest price and sale price on shop / archive and product page instead of full range of prices.
 
 == Description ==
-Do you want to **hide the price range** for WooCommerce variable products?
+Do you want to **disable the price range** and show only lowest price in variable products for WooCommerce?
 
 When you create a variable product with multiple prices, the product's prices are shown as a range like $10 - $99. With the help of this plugin, you can set different prices for the variations of your product but it will show only the lowest price as like AliExpress and Amazon.
 
-The process is easy. You just need to install this **'WooCommerce - Disable Variable Product Price Range'** plugin. The plugin enables variable products to **show only the lowest price and sale price** instead of the full range of prices.
+The process is easy. You just need to install this **'WooCommerce - Show Only Lowest Price in Variable Products'** plugin. The plugin enables variable products to **show only the lowest price and sale price** instead of the full range of prices.
 
 
 It’s a lightweight plugin that gives you lots of features such as:
@@ -29,15 +29,20 @@ It’s a lightweight plugin that gives you lots of features such as:
 * "From" title customizable and translatable.
 * All popular page builders compatible.
 
+= Features: (MORE IN THE PRO VERSION) =
 
-Please let us know your feedback, if you think something can be more awesome this plugin, we will added it.
+* Enable *SALE Badges* before the price.
+* Instant price changing when variation selected.
+* Many more feature coming soon.
+
+Please let us know your feedback, if you think something can be more awesome this plugin, we will add it.
 
 == Installation ==
 ###Automatic Install From WordPress Dashboard
 
 1. Login to your the admin panel
 2. Navigate to Plugins -> Add New
-3. Search **Smooth Back To Top Button**
+3. Search **WooCommerce - Show Only Lowest Price in Variable Products**
 4. Click install and activate respectively.
 
 ###Manual Install From WordPress Dashboard

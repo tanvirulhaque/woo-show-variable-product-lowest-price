@@ -1,15 +1,15 @@
 <?php
 /*
- * Plugin Name: WooCommerce - Disable Variable Product Price Range
+ * Plugin Name: WooCommerce - Show Only Lowest Price in Variable Products
  * Plugin URI: https://wordpress.org/plugins/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
  * Description: Disable Price Range and shows only the lowest price and sale price in the WooCommerce variable products.
  * Author: Tanvirul Haque
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: http://wpxpress.net
  * Text Domain: woo-disable-variable-product-price-range
  * Domain Path: /languages
  * WC requires at least: 3.2
- * WC tested up to: 4.5.2
+ * WC tested up to: 4.7.0
  * License: GPLv2+
 */
 
@@ -114,13 +114,17 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
 
             $min_var_reg_price = $product->get_variation_regular_price( 'min', true );
             $min_var_sale_price = $product->get_variation_sale_price( 'min', true );
-//            $max_var_reg_price  = $product->get_variation_regular_price( 'max', true );
-//            $max_var_sale_price = $product->get_variation_sale_price( 'max', true );
-//            $min_price          = $product->get_variation_price( 'min', true );
-//            $max_price          = $product->get_variation_price( 'max', true );
+            $max_var_reg_price  = $product->get_variation_regular_price( 'max', true );
+            // $max_var_sale_price = $product->get_variation_sale_price( 'max', true );
+            // $min_price          = $product->get_variation_price( 'min', true );
+            // $max_price          = $product->get_variation_price( 'max', true );
 
-            $price = ( $product->is_on_sale() ) ? sprintf( '%1$s <del>%2$s</del> <ins>%3$s</ins>', $prefix, wc_price( $min_var_reg_price ), wc_price( $min_var_sale_price ) ) : sprintf( '%1$s %2$s', $prefix, wc_price( $min_var_reg_price ) );
 
+            $price = ( $product->is_on_sale() ) ? sprintf( '%1$s <del>%2$s</del> <ins>%3$s</ins>', $prefix, wc_price( $max_var_reg_price ), wc_price( $min_var_sale_price ) ) : sprintf( '%1$s %2$s', $prefix, wc_price( $min_var_reg_price ) );
+            
+
+            // return ( is_product() ) ? $price_html . '<div class="hidden-variable-price" style="display:none;">' . $price . '</div>' : $price_html;
+            
             return $price;
         }
 
@@ -143,7 +147,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
                 $class   = 'notice notice-error';
                 $text    = esc_html__( 'Please check PHP version requirement.', 'woo-disable-variable-product-price-range' );
                 $link    = esc_url( 'https://docs.woocommerce.com/document/server-requirements/' );
-                $message = wp_kses( __( "It's required to use latest version of PHP to use <strong>WooCommerce - Disable Variable Product Price Range</strong>.", 'woo-disable-variable-product-price-range' ), array( 'strong' => array() ) );
+                $message = wp_kses( __( "It's required to use latest version of PHP to use <strong>WooCommerce - Show Only Lowest Price in Variable Products</strong>.", 'woo-disable-variable-product-price-range' ), array( 'strong' => array() ) );
 
                 printf( '<div class="%1$s"><p>%2$s <a target="_blank" href="%3$s">%4$s</a></p></div>', $class, $message, $link, $text );
             }
@@ -166,7 +170,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
                     'height'    => '500',
                 ), admin_url( 'plugin-install.php' ) ) );
 
-                $message = wp_kses( __( "<strong>WooCommerce - Disable Variable Product Price Range</strong> is an add-on of ", 'woo-disable-variable-product-price-range' ), array( 'strong' => array() ) );
+                $message = wp_kses( __( "<strong>WooCommerce - Show Only Lowest Price in Variable Products</strong> is an add-on of ", 'woo-disable-variable-product-price-range' ), array( 'strong' => array() ) );
 
                 printf( '<div class="%1$s"><p>%2$s <a class="thickbox open-plugin-details-modal" href="%3$s"><strong>%4$s</strong></a></p></div>', $class, $message, $link, $text );
             }
@@ -187,7 +191,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
         public function wc_version_requirement_notice() {
             if ( $this->is_wc_active() && ! $this->is_required_wc_version() ) {
                 $class   = 'notice notice-error';
-                $message = sprintf( esc_html__( "Currently, you are using older version of WooCommerce. It's recommended to use latest version of WooCommerce to work with %s.", 'woo-disable-variable-product-price-range' ), esc_html__( 'WooCommerce - Disable Variable Product Price Range', 'woo-disable-variable-product-price-range' ) );
+                $message = sprintf( esc_html__( "Currently, you are using older version of WooCommerce. It's recommended to use latest version of WooCommerce to work with %s.", 'woo-disable-variable-product-price-range' ), esc_html__( 'WooCommerce - Show Only Lowest Price in Variable Products', 'woo-disable-variable-product-price-range' ) );
                 printf( '<div class="%1$s"><p><strong>%2$s</strong></p></div>', $class, $message );
             }
         }
