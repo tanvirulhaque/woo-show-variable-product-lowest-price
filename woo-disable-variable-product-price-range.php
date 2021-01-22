@@ -4,12 +4,12 @@
  * Plugin URI: https://wordpress.org/plugins/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
  * Description: Disable Price Range and shows only the lowest price and sale price in the WooCommerce variable products.
  * Author: Tanvirul Haque
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author URI: http://wpxpress.net
  * Text Domain: woo-disable-variable-product-price-range
  * Domain Path: /languages
  * WC requires at least: 3.2
- * WC tested up to: 4.7.0
+ * WC tested up to: 4.9.1
  * License: GPLv2+
 */
 
@@ -30,7 +30,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          * @var  string
          */
-        public $version = '1.0.1';
+        public $version = '1.0.3';
 
 
         /**
@@ -57,7 +57,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * Initializes the class
          *
          * Checks for an existing instance
-         * and if it does't find one, creates it.
+         * and if it doesn't find one, creates it.
          *
          * @return object Class instance
          * @since 1.0.0
@@ -119,13 +119,9 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
             // $min_price          = $product->get_variation_price( 'min', true );
             // $max_price          = $product->get_variation_price( 'max', true );
 
-
             $price = ( $product->is_on_sale() ) ? sprintf( '%1$s <del>%2$s</del> <ins>%3$s</ins>', $prefix, wc_price( $max_var_reg_price ), wc_price( $min_var_sale_price ) ) : sprintf( '%1$s %2$s', $prefix, wc_price( $min_var_reg_price ) );
             
-
-            // return ( is_product() ) ? $price_html . '<div class="hidden-variable-price" style="display:none;">' . $price . '</div>' : $price_html;
-            
-            return $price;
+            return apply_filters( 'wdvpr_price_html', $price, $product );
         }
 
 

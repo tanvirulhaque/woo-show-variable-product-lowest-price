@@ -4,8 +4,10 @@ Donate link:
 Tags: price, prices, variable products, variations, woocommerce
 Requires at least: 4.1
 Tested up to: 5.5.1
+Requires PHP: 5.6
 Stable tag: trunk
-Requires PHP: 5.4
+WC requires at least: 4.5
+WC tested up to: 4.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +33,7 @@ It’s a lightweight plugin that gives you lots of features such as:
 
 = Features: (MORE IN THE PRO VERSION) =
 
-* Enable *SALE Badges* before the price.
+* Enable *SALE Badges* before the price. (Coming soon..)
 * Instant price changing when variation selected.
 * Many more feature coming soon.
 
