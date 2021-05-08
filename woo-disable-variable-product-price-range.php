@@ -4,12 +4,15 @@
  * Plugin URI: https://wordpress.org/plugins/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
  * Description: Disable Price Range and shows only the lowest price and sale price in the WooCommerce variable products.
  * Author: Tanvirul Haque
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author URI: http://wpxpress.net
  * Text Domain: woo-disable-variable-product-price-range
  * Domain Path: /languages
- * WC requires at least: 3.2
- * WC tested up to: 4.9.1
+ * Requires PHP: 5.6
+ * Requires at least: 4.8
+ * Tested up to: 5.7
+ * WC requires at least: 4.5
+ * WC tested up to: 5.2
  * License: GPLv2+
 */
 
@@ -30,7 +33,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          * @var  string
          */
-        public $version = '1.0.3';
+        public $version = '1.0.4';
 
 
         /**
@@ -85,6 +88,8 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
 
             add_filter( 'woocommerce_variable_sale_price_html', array( $this, 'disable_variable_price_range' ), 10, 2 );
             add_filter( 'woocommerce_variable_price_html', array( $this, 'disable_variable_price_range' ), 10, 2 );
+
+            // add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
         }
 
 
@@ -101,6 +106,22 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
 
 
         /**
+         * Plugin action links
+         */
+        public function plugin_action_links( $links ) {
+
+            $new_links = array();
+
+            if ( ! class_exists( 'Woo_Disable_Variable_Price_Range_Pro' ) ) {
+                $new_links['go-pro'] = sprintf( '<a target="_blank" style="color: #45b450; font-weight: bold;" href="%1$s" title="%2$s">%2$s</a>', esc_url( '#' ), esc_attr__( 'Go Pro', 'woo-disable-variable-product-price-range' ) );
+            }
+
+            return array_merge( $links, $new_links );
+
+        }
+
+
+        /**
          * Disable Variable Price Range Function
          *
          * @param $price
@@ -110,6 +131,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          */
         public function disable_variable_price_range( $price, $product ) {
+
             $prefix = apply_filters( 'wdvpr_price_title', sprintf( '%s ', __( 'From:', 'woo-disable-variable-product-price-range' ) ) );
 
             $min_var_reg_price = $product->get_variation_regular_price( 'min', true );
@@ -122,6 +144,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
             $price = ( $product->is_on_sale() ) ? sprintf( '%1$s <del>%2$s</del> <ins>%3$s</ins>', $prefix, wc_price( $max_var_reg_price ), wc_price( $min_var_sale_price ) ) : sprintf( '%1$s %2$s', $prefix, wc_price( $min_var_reg_price ) );
             
             return apply_filters( 'wdvpr_price_html', $price, $product );
+
         }
 
 
