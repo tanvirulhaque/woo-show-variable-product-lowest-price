@@ -1,5 +1,5 @@
 === WooCommerce - Show Only Lowest Price in Variable Products ===
-Contributors: tanviru
+Contributors: tanvirul
 Tags: price, prices, variable products, variations, woocommerce
 Requires PHP: 5.6
 Requires at least: 4.8
