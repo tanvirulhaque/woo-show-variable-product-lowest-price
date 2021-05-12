@@ -4,7 +4,7 @@
  * Plugin URI: https://wordpress.org/plugins/disable-variable-product-price-range-show-only-lowest-price-in-variable-products/
  * Description: Disable Price Range and shows only the lowest price and sale price in the WooCommerce variable products.
  * Author: Tanvirul Haque
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author URI: http://wpxpress.net
  * Text Domain: woo-disable-variable-product-price-range
  * Domain Path: /languages
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Woo_Disable_Variable_Price_Range' ) ) {
          * @since 1.0.0
          * @var  string
          */
-        public $version = '1.0.4';
+        public $version = '1.0.5';
 
 
         /**
